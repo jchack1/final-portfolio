@@ -1,0 +1,128 @@
+@import url(reset.css);
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700&display=swap');
+
+
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+
+/* site-wide styles */
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: hsla(26, 8%, 30%, 1);
+}
+
+h1, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+}
+
+
+/*home page*/
+
+#home-header{
+    background-image: 
+        radial-gradient(circle, rgba(2,0,36,0) 0%, rgba(9,9,121,0) 35%, rgba(0,0,0,0.9923319669664741) 100%),        
+        url(../images/IMG_3451.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    grid-template-rows: 1fr 3fr 1fr;
+
+    height: 90vh;
+}
+
+#julia-logo{
+    width: 100px;
+    margin: 5vmin;
+
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.global-nav{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+#global-nav-ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+#global-nav-ul > li{
+    display: flex;
+    justify-items: center;
+}
+
+
+#close-menu{
+    display: none;
+}
+
+
+/* underline code from this codepen: https://codepen.io/jstn/pen/zuDst */
+
+#global-nav-ul > li > a {
+    color: white;
+    margin: 2vmin;
+    padding: 0px 15px 15px 15px;
+    position: relative;
+}
+#global-nav-ul > li > a:after {    
+    /* background: none repeat scroll 0 0 transparent; */
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+#global-nav-ul > li > a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+
+#home-intro{
+    grid-column: 2/4;
+    grid-row: 2/3;
+
+    color: white;
+}
+
+#home-title{
+    font-size: 3rem;
+}
+
+#home-intro >p{
+    font-size: 1rem;
+}
+
+#home-button{
+    margin-top: 7vmin;
+}
+
+#home-button a{
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 2vmin;
+    color: white;
+    text-decoration: none;
+}
+
+#home-button a:hover{
+    color: #60bdb3;
+    border: 2px solid #60bdb3;
+    transition: ease-in-out 0.3s;
+    
+}
