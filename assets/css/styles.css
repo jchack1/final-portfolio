@@ -18,8 +18,14 @@ h1, h2, h3 {
     font-weight: lighter;
 }
 
+h2{
+    margin: 5vmin;
+    margin-top: 10vmin;
 
-/*home page*/
+}
+
+
+/*home page and general styles*/
 
 .header{
     background-image: 
@@ -234,38 +240,11 @@ h1, h2, h3 {
 }
 
 
-footer{
-    background: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
-    height: 15vh;
-    margin-bottom: 0;
-}
 
-footer > p{
-    margin: 1vmin;
-}
-
-footer > p > a{
-    color: white;
-    font-size: 1.5rem;
-    font-weight: lighter;
-}
-
-footer > p > a:hover{
-    color: hsla(249, 80%, 56%, 1);
-}
 
 
 /* art and photos page */
 
-.art-photos-titles{
-    margin: 5vmin;
-    margin-top: 10vmin;
-}
 
 .art-photos-section{
     width: 90vw;
@@ -329,12 +308,163 @@ footer > p > a:hover{
       width: auto;
       border-radius: 0;
   }
-
-  
-
   /* end of overlay code from sylivandurand.com */
 
 
+  /* design page */
+
+  .design-section{
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 7vmin;
+  } 
+
+  .design-section img{
+      width: 300px;
+      height: auto;
+  }
+
+/* logos */
+
+  .logo-section img{
+    padding: 2vmin;
+  }
+
+  .logo-section{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+      width: 85vw;
+  }
+
+  #zoo-logos{
+      grid-column: 1/2;
+      grid-row: 1/3;
+      width: 30vw;
+  }
+
+  #dots-logo{
+      grid-column: 2/3;
+      grid-row: 1/2;
+      width: 15vw;
+  }
+
+  #turtle-logo{
+      grid-column: 3/4;
+      grid-row: 1/2;
+      width: 20vw;
+  }
+
+  #logo-paragraph{
+      grid-column: 2/4;
+      grid-row: 2/3;
+      max-width: 60ch;
+      padding: 2vmin;
+      align-self: start;
+  }
+
+  /* mock-ups */
+
+  .mockup-section{
+      display: flex;
+      flex-direction: column;
+
+      width: 90vw;
+  }
+
+  .mockup-div-flex{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+
+  .mockup-div-flex img{
+      width: 40vw;
+      height: auto;
+      margin: 2vmin;
+      border: 1px solid gray;
+  }
+
+  .mockup-and-paragraph-div{
+      display: flex;
+      flex-direction: column;
+  }
+
+  #mockup-paragraph{
+      max-width: 60ch;
+  }
+
+
+  /* typography */
+
+  .experiment-section img{
+    padding: 2vmin;
+  }
+
+  .experiment-section{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+      
+  }
+
+  #typography-sketch{
+      grid-column: 1/2;
+      grid-row: 1/4;
+      width: 40vw;
+  }
+
+  #ambigram{
+      grid-column: 2/3;
+      grid-row: 1/2;
+      width: 30vw;
+  }
+
+  #deconstructed-text{
+      grid-column: 2/3;
+      grid-row: 2/3;
+      width: 30vw;
+  }
+
+  #experiment-paragraph{
+      grid-column: 2/3;
+      grid-row: 3/4;
+      max-width: 50ch;
+      padding: 2vmin;
+      align-self: start;
+  }
+
+
+
+  /* footer */
+  footer{
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    height: 15vh;
+    margin-bottom: 0;
+}
+
+footer > p{
+    margin: 1vmin;
+}
+
+footer > p > a{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+footer > p > a:hover{
+    color: hsla(249, 80%, 56%, 1);
+}
 
 @media (max-width: 900px){
     nav {
@@ -407,7 +537,26 @@ footer > p > a:hover{
         transition: 0.6s;
         width: 70vmin;
         height: auto;
-}
+    }
+
+    /* design page */
+
+    .mockup-div-flex{
+        flex-direction: column;
+    }
+
+    .mockup-and-paragraph-div{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+  
+    .mockup-div-flex img{
+        width: 80vw;
+    }
+
+    #mockup-paragraph{
+        padding: 3vmin;
+    }
 }
 
 @media (max-width: 770px){
@@ -415,6 +564,79 @@ footer > p > a:hover{
         width: 35vw; 
         margin: 2vmin;
     }
+
+    /* logos */
+    .logo-section{
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 2fr 2fr 3fr;
+    }
+
+    #zoo-logos{
+        width: 40vw;
+    }
+
+
+    #turtle-logo{
+        grid-area: 2/2/3/3;
+    }
+
+    #logo-paragraph{
+        grid-area: 3/1/3/3;
+    }
+
+    /* typography */
+
+    .experiment-section{
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    #typography-sketch{
+        width: 40vw;
+    }
+
+    #ambigram{
+        /* width: 30vw; */
+    }
+
+    #deconstructed-text{
+        grid-area: 2/2/3/3;
+    }
+
+    #experiment-paragraph{
+        grid-area: 3/2/4/3;
+    }
+}
+
+@media (max-width: 630px){
+        /* typography */
+
+        .experiment-section{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 2fr 1fr;
+    
+        }
+    
+        #typography-sketch{
+            grid-area: 3/1/4/2;
+            width: 70vw;
+        }
+    
+        #ambigram{
+            grid-area: 1/1/2/2;
+            width: 70vw;
+    
+        }
+    
+        #deconstructed-text{
+            grid-area: 2/1/3/2;
+            width: 70vw;
+    
+        }
+
+        #experiment-paragraph{
+            grid-area: 4/1/5/2;
+        }
 }
 
 @media (max-width: 400px){
@@ -435,6 +657,31 @@ footer > p > a:hover{
     #home-button a{
         padding: 3vmin;
     }
+
+    /* design page */
+    .logo-section{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 3fr;
+
+    }
+
+    #zoo-logos{
+        grid-area: 2/1/3/3;
+        width: 60vw;
+    }
+
+    #dots-logo{
+        grid-area: 1/1/2/2;
+        width: 30vw;
+
+    }
+
+    #turtle-logo{
+        grid-area: 1/2/2/3;
+        width: 30vw;
+
+    }
+
 
     footer{
         height: 10vh;
