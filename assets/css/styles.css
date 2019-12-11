@@ -212,7 +212,6 @@ h1, h2, h3 {
     border-radius: 10px;
     border: 1px solid rgba(28,28,28,0.4);
     box-shadow: 0px 3px 28px -3px rgba(28,28,28,1);
-
 }
 
 .web-screenshot:hover{
@@ -234,7 +233,6 @@ h1, h2, h3 {
     color: hsla(249, 85%, 70%, 1);
 }
 
-/* media query smaller screen */
 
 footer{
     background: black;
@@ -264,26 +262,77 @@ footer > p > a:hover{
 
 /* art and photos page */
 
+.art-photos-titles{
+    margin: 5vmin;
+    margin-top: 10vmin;
+}
+
 .art-photos-section{
     width: 90vw;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
-    
 }
 
-.art-photos-section > img{
+.art-photos-section > a > img{
     width: 300px; 
     /* width: auto; */
     margin: 3vmin;
+    border-radius: 10px;
+    /* border: 1px solid rgba(28,28,28,0.4); */
 }
 
-.invisible{
-    display: none;
+.art-photos-section > a > img:hover{
+    box-shadow: 0px 3px 28px -3px rgba(28,28,28,1);
+    transition: 0.2s ease-in-out; 
 }
 
+
+
+/* code from https://www.sylvaindurand.org/overlay-image-in-pure-css/#_ - very helpful article, I made my own edits as well to suit my needs*/
+
+.overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    visibility: hidden;
+    /* opacity: 0; 
+    transition:  0.3s; */
+  }
+  
+   .overlay img{
+    width: 20vw;
+    transform: scale(0.8);
+  }
+  
+  .overlay:target {
+    visibility: visible;
+    outline: none;
+    cursor: default;
+  }
+  
+  .overlay:target img {
+      transform: scale(1);
+      transition: 0.5s;
+      /* width: 60vmin;
+      height: auto; */
+      height: 70vmin;
+      width: auto;
+      border-radius: 0;
+  }
+
+  
+
+  /* end of overlay code from sylivandurand.com */
 
 
 
@@ -306,7 +355,7 @@ footer > p > a:hover{
     .menu-open{
         transform: translateX(-250px);
         transition: 0.2s;
-        /* cubic bexier?? */
+        /* cubic bezier?? */
     }
 
     .menu-close{
@@ -351,6 +400,21 @@ footer > p > a:hover{
     .web-screenshot{
         width: 80vw;
     }
+
+    /* art and photos */
+    .overlay:target img {
+        transform: scale(1.1);
+        transition: 0.6s;
+        width: 70vmin;
+        height: auto;
+}
+}
+
+@media (max-width: 770px){
+    .art-photos-section > a > img{
+        width: 35vw; 
+        margin: 2vmin;
+    }
 }
 
 @media (max-width: 400px){
@@ -358,6 +422,10 @@ footer > p > a:hover{
         grid-template-columns: 15vw 3fr;
         grid-template-rows: 1fr 4fr 1fr;
         height: 90vh;
+    }
+
+    .page-header{
+        height: 50vh;
     }
 
     #home-intro{
