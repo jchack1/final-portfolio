@@ -21,7 +21,6 @@ h1, h2, h3 {
 h2{
     margin: 5vmin;
     margin-top: 10vmin;
-
 }
 
 
@@ -438,7 +437,53 @@ h2{
       align-self: start;
   }
 
+  /* about page */
 
+  #julia-photo{
+      display: block;
+      float: left;
+      width: 10vw;
+      filter: grayscale(100%);
+      margin: 0 20px 20px 0;
+  }
+
+  .about-flex{
+      display: flex;
+      width: 80vw;
+      margin: 0 auto;
+      justify-content: space-around;
+  }
+
+  .about-flex h2{
+      margin-left: 0;
+  }
+
+  .my-skills ul li{
+      font-size: 16px;
+      font-family: 'Open Sans', sans-serif;
+      color: hsla(26, 8%, 30%, 1);
+      list-style: square;
+  }
+
+  #about-paragraph{
+      margin: 7vmin auto;
+      text-align: center;
+      max-width: 60ch;
+      font-size: 1.2rem;
+  }
+
+  .my-story{
+      width: 30vw;
+      max-width: 60ch;
+  }
+
+  .my-skills{
+      width: 30vw;
+  }
+
+  article ul{
+      margin-bottom: 5vmin;
+  }
 
   /* footer */
   footer{
@@ -595,9 +640,6 @@ footer > p > a:hover{
         width: 40vw;
     }
 
-    #ambigram{
-        /* width: 30vw; */
-    }
 
     #deconstructed-text{
         grid-area: 2/2/3/3;
@@ -606,6 +648,34 @@ footer > p > a:hover{
     #experiment-paragraph{
         grid-area: 3/2/4/3;
     }
+
+    /* about page */
+
+    .about-flex{
+        flex-direction: column-reverse;
+        align-content: center;
+    }
+
+    .about-flex article{
+        width: 60vw;
+        align-self: center;
+    }
+
+    #julia-photo{
+        width: 30vw;
+    }
+    #about-paragraph{
+        margin: 7vmin;
+    }
+
+    article p{
+        min-width: 25ch;
+    }
+
+    article ul{
+        margin-bottom: 7vmin;
+    }
+    
 }
 
 @media (max-width: 630px){
