@@ -495,11 +495,11 @@ h2{
   }
 
   .contact-social-section{
-      width: 45vw;
+      width: 30vw;
   }
 
   .contact-fieldset{
-      width: 45vw;
+      width: 50vw;
     border: none;
       display: flex;
       flex-direction: column;
@@ -508,6 +508,7 @@ h2{
 
   form{
     margin-top: 10vmin;
+    margin-bottom: 10vmin;
 
   }
   .contact-legend{
@@ -515,6 +516,67 @@ h2{
       font-family: 'Raleway', sans-serif;
   }
 
+  #contact-submit-button{
+    border: 2px solid hsla(249, 80%, 56%, 1);
+    background: hsla(249, 80%, 56%, 1);
+    border-radius: 8px;
+    padding: 1.5vmin 3vmin;
+    margin-top: 5vmin;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+#contact-submit-button:hover{
+    border: 2px solid hsla(249, 80%, 56%, 1);
+    background: white;
+    color: hsla(249, 80%, 56%, 1);
+    transition: ease-in-out 0.3s;
+}
+
+#message{
+    width: 50vw;
+    height: 30vh;
+    padding-top: 5px;
+}
+
+label{
+    margin-top: 3vmin;
+    margin-bottom: 2vmin;
+}
+
+input{
+    width: 30vw;
+    height: 25px;
+}
+
+input, #message{
+    border: 0;
+    border-radius: 5px;
+    background: hsla(249, 20%, 90%, 1);
+    padding-left: 5px;
+}
+
+input:focus, #message:focus{
+    outline: 1px solid hsla(249, 20%, 50%, 1);
+}
+
+/* blog */
+
+.blog-post{
+    margin: 0 auto;
+    margin-bottom: 8vmin;
+    width: 70vw;
+    max-width: 70ch;
+}
+
+.blog-post h2{
+    margin-left: 0;
+}
+
+.blog-post h3{
+    font-style: italic;
+}
 
   /* footer */
   footer{
@@ -738,6 +800,22 @@ footer > p > a:hover{
         #experiment-paragraph{
             grid-area: 4/1/5/2;
         }
+
+        /* contact */
+
+        .contact-fieldset{
+            width: 80vw;
+        }
+
+        #message{
+            width: 70vw;
+        }
+
+        input{
+            width: 50vw;
+        }
+
+        
 }
 
 @media (max-width: 400px){
@@ -783,6 +861,11 @@ footer > p > a:hover{
 
     }
 
+    /* contact */
+
+    #contact-submit-button{
+        padding: 3vmin 5vmin;
+    }
 
     footer{
         height: 10vh;
