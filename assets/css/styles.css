@@ -581,8 +581,9 @@ input:focus, #message:focus{
     font-style: italic;
 }
 
-  /* footer */
-  footer{
+/* footer */
+
+footer{
     background: black;
     display: flex;
     flex-direction: column;
