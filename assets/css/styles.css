@@ -495,21 +495,43 @@ ul li{
   .contact-main{
       display: flex;
       justify-content: space-evenly;
-      width: 90vw;
+      width: 80vw;
       margin: 0 auto;
   }
 
-  .contact-social-section{
-      width: 30vw;
+  .contact-main a{
+      text-decoration: none;
+  }
+
+  .contact-info-section{
+      width: 40vw;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .contact-icon{
+      font-size: 40px;
+      text-align: center;
+  }
+
+  .contact-blog{
+      padding: 5vmin;
+  }
+
+  .contact-blog h2{
+      margin-left: 0;
   }
 
   .contact-fieldset{
-      width: 50vw;
-    border: none;
+      width: 40vw;
+      border: none;
       display: flex;
       flex-direction: column;
-      justify-content: center; 
   }
+
+  .contact-info-section h2{
+    text-align: center;
+}
 
   form{
     margin-top: 10vmin;
@@ -566,21 +588,9 @@ input:focus, #message:focus{
     outline: 1px solid hsla(249, 20%, 50%, 1);
 }
 
-/* blog */
+.contact-form-section{
+    padding: 0 5vmin;
 
-.blog-post{
-    margin: 0 auto;
-    margin-bottom: 8vmin;
-    width: 70vw;
-    max-width: 70ch;
-}
-
-.blog-post h2{
-    margin-left: 0;
-}
-
-.blog-post h3{
-    font-style: italic;
 }
 
 /* footer */
@@ -613,6 +623,12 @@ footer > p > a:hover{
 @media (max-width: 1200px){
     
     .web-main-flexbox{
+        width: 90vw;
+    }
+}
+
+@media (max-width: 1050px){
+    .contact-main{
         width: 90vw;
     }
 }
@@ -707,6 +723,22 @@ footer > p > a:hover{
 
     #mockup-paragraph{
         padding: 3vmin;
+    }
+
+    /* contact */
+
+    .contact-main{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info-section{
+        width: 70vw;
+    }
+
+
+    .blog-link{
+        text-align: center;
     }
 }
 
